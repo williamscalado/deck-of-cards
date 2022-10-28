@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
  --blue-soft: #00D2FF;
 --bs-white: #fff;
 --white: #fff;
---bs-gray: #6c757d;
+--bs-gray: #d9d9de;
 --bs-gray-dark: #343a40;
 --bs-primary: #0d6efd;
 --bs-secondary: #6c757d;
@@ -29,6 +29,11 @@ export const GlobalStyle = createGlobalStyle`
 --bs-light: #f8f9fa;
 --bs-dark: #212529;
 --bs-dark-full: #161c20;
+
+--red-600: #e50030;
+--red-800: #a50027;
+
+--black: #000;
   
 }
 *{
@@ -48,32 +53,24 @@ export const GlobalStyle = createGlobalStyle`
   border-radius: 10px;
 }
 body{
-    background-color: var(--background);
-    /* background: url("../../public/image/bg.jpg") no-repeat fixed center; */
+    /* background-color: var(--background); */
+    background: url("../../public/image/bg.jpg") no-repeat fixed center;
     background-size:cover;
     font-size: 16;
     -webkit-font-smoothing: antialiased;
     letter-spacing: 0.1em;
     font-family: 'Fredoka One', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
 }
-body, input, textarea, button{  
-    letter-spacing: 0.1em;
-    font-family: 'Fredoka One', sans-serif;  
-    font-weight: 700;
+input, textarea, button{  
+   
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 h1 , h2 , h3 , h4 , h5 , h6, strong{
-    font-weight: 400;
+    font-weight: 200;
 }
-html{
-    
-    @media (max-width: 1080px) {
-        font-size: 93.75%;
-    }
-    @media (max-width: 720px){
-        font-size: 87.5%;
-    }
-}
+
 button{
     cursor: pointer;
 }
@@ -82,7 +79,7 @@ button{
     opacity: 0.6;
 }
 .modal-style{
-    width: 576px;
+    width: 36rem;
     background-color: var(--background);
     padding: 0 2rem 2rem;
     margin: auto;
@@ -107,7 +104,7 @@ button{
     padding: 1rem 1rem ;
     float: right;
     margin-top: 1rem;
-    margin-right: 0px;
+    margin-right: 0rem;
 }
 
 `;

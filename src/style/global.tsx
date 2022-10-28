@@ -10,8 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 --bs-pink: #d63384;
 --bs-red: #dc3545;
 --bs-orange: #fd7e14;
---bs-yellow: ##F2CB05;
---bs-yellow-sd: ###F2B705;
+--bs-yellow: #F2CB05;
+--bs-yellow-sd: #F2B705;
 --bs-green: #198754;
 --bs-teal: #37ad90;
 --bs-cyan: #0dcaf0;
@@ -48,8 +48,8 @@ export const GlobalStyle = createGlobalStyle`
   border-radius: 10px;
 }
 body{
-    background-color: var(--background);
-    /* background: url("../../public/image/bg.jpg") no-repeat fixed center; */
+    /* background-color: var(--background); */
+    background: url("../../public/image/bg.jpg") no-repeat fixed center;
     background-size:cover;
     font-size: 16;
     -webkit-font-smoothing: antialiased;

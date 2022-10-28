@@ -2,39 +2,68 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 :root {
-    --background: #F0F2F5;
-    --background-header: #283a50;
-    --buttonheader: #02849B; 
-    --red:#E62E4D;
-    --blue: #5429CC;
-    --blue-light: #6933ff;
-    --green-light:#02EB64;
-   
-    --green-select:#02AB92;
-    --text-title: #363F5F;
-    --text-body: #969CB3;
-    --shape: #FFFFFF;
-    
-    --shape-box: #02849B;
-    --green-sucess: hsl(120,100%,90%);
-    --red-danger: hsl(0, 100%, 90%);
+    --background: #000;
+
+--bs-blue: #0d6efd;
+--bs-indigo: #6610f2;
+--bs-purple: #6f42c1;
+--bs-pink: #d63384;
+--bs-red: #dc3545;
+--bs-orange: #fd7e14;
+--bs-yellow: ##F2CB05;
+--bs-yellow-sd: ###F2B705;
+--bs-green: #198754;
+--bs-teal: #37ad90;
+--bs-cyan: #0dcaf0;
+ --blue-soft: #00D2FF;
+--bs-white: #fff;
+--white: #fff;
+--bs-gray: #6c757d;
+--bs-gray-dark: #343a40;
+--bs-primary: #0d6efd;
+--bs-secondary: #6c757d;
+--bs-success: #198754;
+--bs-info: #0dcaf0;
+--bs-warning: #ffc107;
+--bs-danger: #dc3545;
+--bs-light: #f8f9fa;
+--bs-dark: #212529;
+--bs-dark-full: #161c20;
+  
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+::-webkit-scrollbar {
+  width: 3px;
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border-radius: 10px;
+}
 body{
     background-color: var(--background);
+    /* background: url("../../public/image/bg.jpg") no-repeat fixed center; */
+    background-size:cover;
     font-size: 16;
     -webkit-font-smoothing: antialiased;
-}
-body, input, textarea, button{
-    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+    font-family: 'Fredoka One', sans-serif;
     font-weight: 400;
 }
+body, input, textarea, button{  
+    letter-spacing: 0.1em;
+    font-family: 'Fredoka One', sans-serif;  
+    font-weight: 700;
+}
 h1 , h2 , h3 , h4 , h5 , h6, strong{
-    font-weight: 600;
+    font-weight: 400;
 }
 html{
     

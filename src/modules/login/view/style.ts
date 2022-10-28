@@ -2,21 +2,26 @@ import styled from "styled-components";
 
 export const ContainerLogin = styled("div")`
 	margin: auto;
-	width: 100vw;
-	height: 100vh;
+	width: 98vw;
+	height: 80vh;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	img {
+		margin-bottom: 5rem;
+		width: 18.75rem;
+	}
 `;
 
 export const ContainerForm = styled("div")`
-	width: 280px;
-	height: 200px;
+	width: 17.5rem;
+	height: 12.5rem;
 	border-radius: 0.8rem 0.8rem 3rem 3rem;
 	padding: 1.1rem;
-	background: var(--bs-green);
-	box-shadow: 2px 3px 20px #000;
+	background: var(--white);
+	box-shadow: 0.125rem 0.1875rem 1.25rem var(--black);
 `;
 
 export const ContainerInput = styled("div")`
@@ -35,20 +40,20 @@ export const ContainerInput = styled("div")`
 		border-radius: 1rem;
 		border: 0;
 		color: var(--bs-gray-dark);
-		background-color: var(--bs-white);
+		background-color: var(--bs-gray);
 		box-sizing: border-box;
-		height: 50px;
+		height: 3.125rem;
 		padding-left: 2.5rem;
 	}
 	span {
 		height: 1.5rem;
 		width: 1.5rem;
-		padding: 4px;
+		padding: 0.25rem;
 		color: #b4b4b4;
 		position: absolute;
 		box-sizing: border-box;
 		top: 50%;
-		left: 10px;
+		left: 0.625rem;
 		transform: translateY(-50%);
 	}
 `;
@@ -59,7 +64,7 @@ export const Title = styled("div")`
 	justify-content: center;
 	font-size: 1rem;
 	font-weight: bold;
-	color: var(--white);
+	color: var(--red-800);
 `;
 export const ContainerButton = styled("div")`
 	width: 100%;
@@ -70,19 +75,19 @@ export const ContainerButton = styled("div")`
 
 	button {
 		position: relative;
-		top: 40px;
-		background: #f2cb05;
+		top: 2.5rem;
+		background: var(--red-600);
 		margin: 1.5rem 0 1rem;
-		border: 0px;
-		width: 140px;
+		border: 0rem;
+		width: 10rem;
 		height: 3.2rem;
-		font-weight: 400;
-		border-radius: 5rem;
+		font-weight: 700;
+		border-radius: 99rem;
 		font-size: 1rem;
 		color: var(--bs-white);
 		transition: filter 0.3s;
-		box-shadow: 2px 3px 1px #a95809;
-		text-shadow: 1px 1px 2px #a95809;
+		box-shadow: 0.125rem 0.1875rem 0.0625rem var(--red-800);
+		text-shadow: 0.0625rem 0.0625rem 0.125rem var(--red-800);
 
 		&:hover {
 			filter: brightness(0.9);

@@ -10,8 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 --bs-pink: #d63384;
 --bs-red: #dc3545;
 --bs-orange: #fd7e14;
---bs-yellow: ##F2CB05;
---bs-yellow-sd: ###F2B705;
+--bs-yellow: #F2CB05;
+--bs-yellow-sd: #F2B705;
 --bs-green: #198754;
 --bs-teal: #37ad90;
 --bs-cyan: #0dcaf0;

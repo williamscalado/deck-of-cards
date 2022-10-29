@@ -15,7 +15,7 @@ export const ContainerLogin = styled("div")`
 	}
 `;
 
-export const ContainerForm = styled("div")`
+export const ContainerForm = styled("form")`
 	width: 17.5rem;
 	height: 12.5rem;
 	border-radius: 0.8rem 0.8rem 3rem 3rem;
@@ -66,6 +66,16 @@ export const Title = styled("div")`
 	font-weight: bold;
 	color: var(--red-800);
 `;
+
+export const ErrorMessage = styled("div")`
+	position: absolute;
+	margin-left: 1rem;
+	margin-top: 0.8rem;
+	font-weight: 400;
+	font-size: 0.6rem;
+	color: var(--red-600);
+`;
+
 export const ContainerButton = styled("div")`
 	width: 100%;
 	display: flex;

@@ -11,9 +11,13 @@ import { useForm } from "react-hook-form";
 import { IForm } from "../../../types";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { userFormValidation } from "../validation";
-import { errorSelector } from "recoil";
+import { useNavigate } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { userStateData } from "../../../state";
 
 export const Login = () => {
+	const setUserData = useSetRecoilState(userStateData);
+	const navigation = useNavigate();
 	const {
 		register,
 		handleSubmit,
@@ -24,10 +28,7 @@ export const Login = () => {
 		mode: "onBlur",
 	});
 
-	const handleForm = (data: IForm) => {
-		console.log(data);
-		return data;
-	};
+	const handleForm = (data: IForm) => setUserData(data);
 
 	return (
 		<ContainerLogin>

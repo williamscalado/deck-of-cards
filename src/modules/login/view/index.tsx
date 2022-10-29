@@ -14,7 +14,7 @@ import { userFormValidation } from "../validation";
 import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { userStateData } from "../../../state";
-
+import { toast } from "react-toastify";
 export const Login = () => {
 	const setUserData = useSetRecoilState(userStateData);
 	const navigation = useNavigate();
@@ -28,7 +28,14 @@ export const Login = () => {
 		mode: "onBlur",
 	});
 
-	const handleForm = (data: IForm) => setUserData(data);
+	const handleForm = (data: IForm) => {
+		try {
+			setUserData(data);
+			navigation("/cards");
+		} catch (error) {
+			toast.error("Encontramos um problema ao gerar suas cartas");
+		}
+	};
 
 	return (
 		<ContainerLogin>

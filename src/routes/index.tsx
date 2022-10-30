@@ -8,7 +8,6 @@ import { userStateData } from "../state";
 export const AppRouters = () => {
 	const [userData] = useRecoilState(userStateData);
 	function IsExistName() {
-		let location = useLocation();
 		if (!userData.name) return <Navigate to={"/"} state={{ from: "state" }} />;
 		return <Outlet />;
 	}

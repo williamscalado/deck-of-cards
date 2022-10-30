@@ -3,10 +3,10 @@ export interface IForm {
 }
 
 export interface IDataCard {
-	code: string;
+	code?: string;
 	image: string;
-	value: string;
-	suit: string;
+	value?: string;
+	suit?: string;
 }
 
 export interface IDataCardResult {
@@ -16,7 +16,7 @@ export interface IDataCardResult {
 	remaining: number;
 }
 
-interface IDataCardUser extends IDataCard {
+export interface IDataCardUser extends IDataCard {
 	points: number;
 }
 

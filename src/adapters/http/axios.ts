@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { IHTTPRequest, IHTTPRequestError } from "../types";
 
-const API_ENDPOINT = process.env.APICARD;
+const API_ENDPOINT = import.meta.env.VITE_APP_APICARD;
 
 const errorMessages: IHTTPRequestError = {
 	default: "something went wrong",

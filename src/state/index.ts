@@ -5,7 +5,7 @@ import {
 	RecoilRootProps,
 	SetRecoilState,
 } from "recoil";
-import { IUserData } from "../types";
+import { IDataCardUser, IUserData } from "../types";
 interface IPropsRecoil {
 	setSelf: any;
 	onSet: any;

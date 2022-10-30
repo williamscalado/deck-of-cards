@@ -15,7 +15,8 @@ import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { userStateData } from "../../../state";
 import { toast } from "react-toastify";
-export const Login = () => {
+
+export const Auth = () => {
 	const setUserData = useSetRecoilState(userStateData);
 	const navigation = useNavigate();
 	const {

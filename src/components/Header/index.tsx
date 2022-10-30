@@ -1,30 +1,25 @@
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { cardUseCase } from "../../modules/cards/useCase";
 import { userStateData } from "../../state";
 import { IDataCardUser } from "../../types";
 import { ContainerHeader, ContainerMenu, ContainerUser } from "./style";
 
-function shuffle(array: any) {
+const shuffle = (array: any) => {
 	let currentIndex = array.length,
 		randomIndex;
-
-	// While there remain elements to shuffle.
 	while (currentIndex != 0) {
-		// Pick a remaining element.
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex--;
-
-		// And swap it with the current element.
 		[array[currentIndex], array[randomIndex]] = [
 			array[randomIndex],
 			array[currentIndex],
 		];
 	}
-
 	return array;
-}
+};
+
 export const Header = () => {
 	const navigate = useNavigate();
 	const [dataUser, setDataUser] = useRecoilState(userStateData);

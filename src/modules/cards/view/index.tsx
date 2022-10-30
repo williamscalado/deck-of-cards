@@ -28,7 +28,7 @@ export const Cards = () => {
 				5
 			);
 
-			if (!userData.cards?.length)
+			if (!userData.cards)
 				setUserData({
 					...userData,
 					cards: firstFiveCards.cards,
@@ -46,9 +46,9 @@ export const Cards = () => {
 		<React.StrictMode>
 			<Header />
 			<ContainerCards>
-				{userData.cards?.length
+				{userData.cards
 					? userData.cards?.map((item) => {
-							return <Card props={item} />;
+							return <Card key={item.code} props={item} />;
 					  })
 					: null}
 			</ContainerCards>

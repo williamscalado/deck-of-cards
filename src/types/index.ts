@@ -7,6 +7,7 @@ export interface IDataCard {
 	image: string;
 	value?: string;
 	suit?: string;
+	point?: string;
 }
 
 export interface IDataCardResult {

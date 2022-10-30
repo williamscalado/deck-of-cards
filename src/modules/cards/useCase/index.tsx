@@ -19,6 +19,11 @@ const getCards = async (deckId: string, numberCard: number) => {
 			url: `/new/draw/?count=${numberCard}`,
 			method: "GET",
 		});
+		const newData = [...result.cards];
+		newData.map(
+			(item) => (item.point = Math.round(Math.random() * (10 - 0) + 0))
+		);
+		result.cards = newData;
 		return result;
 	} catch (error) {
 		throw new Error("Encontramos um problema aos obter o baralho");

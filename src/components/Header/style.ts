@@ -41,7 +41,6 @@ export const ContainerUser = styled("div")`
 		padding: 0.2rem 1rem;
 		margin-left: 1rem;
 		border: 0rem;
-
 		font-weight: 700;
 		border-radius: 99rem;
 		font-size: 1rem;

@@ -2,7 +2,7 @@ export interface IForm {
 	name?: string;
 }
 
-interface IDataCard {
+export interface IDataCard {
 	code: string;
 	image: string;
 	value: string;

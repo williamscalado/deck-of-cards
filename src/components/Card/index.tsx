@@ -45,7 +45,7 @@ export const Card = ({ props }: IPropsCard) => {
 				</Description>
 			</SummaryCard>
 			<ContainerPoint>
-				Pontuação
+				Ponto(s)
 				<PointDisplay>{props.point}</PointDisplay>
 			</ContainerPoint>
 		</ContainerCard>

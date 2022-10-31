@@ -57,11 +57,9 @@ export const Header = () => {
 			<ContainerMenu>
 				<button onClick={handleShuffle}>Embaralha</button>
 				<button onClick={handleNewCard}>Nova carta</button>
-			</ContainerMenu>
-			<ContainerUser>
-				Olá, {dataUser.name}
 				<button onClick={handleExit}>Sair</button>
-			</ContainerUser>
+			</ContainerMenu>
+			<ContainerUser>Olá, {dataUser.name}</ContainerUser>
 		</ContainerHeader>
 	);
 };

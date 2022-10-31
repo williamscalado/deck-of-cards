@@ -6,9 +6,13 @@ export const ContainerCard = styled("div")`
 	background-color: #fff;
 	margin: 1rem;
 	transition: box-shadow 0.5s;
-	width: 8.125rem;
+	width: 10rem;
+	display: grid;
+	align-items: center;
+	justify-content: center;
 
 	img {
+		margin: auto;
 		width: 7.5rem;
 		height: 168px;
 	}
@@ -16,6 +20,12 @@ export const ContainerCard = styled("div")`
 	&:hover {
 		box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
 			rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	}
+	@media (max-width: 700px) {
+		display: grid;
+		width: 80vw;
+		align-items: center;
+		justify-content: center;
 	}
 `;
 
@@ -28,19 +38,28 @@ export const SummaryCard = styled("div")`
 	p {
 		display: flex;
 		width: 100%;
+		font-size: 0.7rem;
 		justify-content: center;
 		align-items: center;
 	}
 `;
 
 export const Description = styled("div")`
+	margin: auto;
 	word-break: inherit;
 	word-wrap: break-word;
 	height: 1.25rem;
-	width: 7.5rem;
+	width: 95%;
+	align-content: center;
+	font-family: sans-serif;
 	margin-top: 5px;
-	font-size: 0.4rem;
+	font-size: 0.5rem;
+	font-weight: 400;
 	color: #aaa;
+
+	@media (max-width: 700px) {
+		width: 80%;
+	}
 `;
 
 export const ContainerPoint = styled("div")`

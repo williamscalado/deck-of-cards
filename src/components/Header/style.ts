@@ -15,7 +15,7 @@ export const ContainerHeader = styled("div")`
 	@media (max-width: 700px) {
 		width: 95vw;
 		display: grid;
-		justify-content: space-around;
+		justify-content: grid;
 
 		img {
 			margin: auto;
@@ -80,6 +80,10 @@ export const ContainerMenu = styled("div")`
 	border-radius: 1rem;
 	padding: 0.2rem;
 	font-weight: 400;
+
+	@media (max-width: 700px) {
+		justify-content: center;
+	}
 
 	button {
 		background: var(--bs-yellow);

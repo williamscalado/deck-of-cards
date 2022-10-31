@@ -36,7 +36,7 @@ export const Card = ({ props, loading }: IPropsCard) => {
 	if (!props.suit) props.suit = "";
 	return loading ? (
 		<ContainerCard>
-			<Skeleton width={120} height={170} />
+			<Skeleton width={120} height={167} />
 			<SummaryCard>
 				<p>
 					<Skeleton height={15} width={100} count={1} className={"center"} />

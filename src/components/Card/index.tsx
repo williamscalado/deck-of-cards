@@ -1,4 +1,6 @@
+import Skeleton from "react-loading-skeleton";
 import { IDataCard } from "../../types";
+import "react-loading-skeleton/dist/skeleton.css";
 import {
 	ContainerCard,
 	ContainerPoint,
@@ -27,12 +29,29 @@ const nameCard = (name: string) => {
 };
 interface IPropsCard {
 	props: IDataCard;
+	loading?: boolean;
 }
 
-export const Card = ({ props }: IPropsCard) => {
+export const Card = ({ props, loading }: IPropsCard) => {
 	if (!props.suit) props.suit = "";
-	return (
-		<ContainerCard key={props?.suit}>
+	return loading ? (
+		<ContainerCard>
+			<Skeleton width={120} height={170} />
+			<SummaryCard>
+				<p>
+					<Skeleton height={15} width={100} count={1} className={"center"} />
+				</p>
+				<Description>
+					<Skeleton height={38} count={1} />
+				</Description>
+			</SummaryCard>
+			<ContainerPoint>
+				<Skeleton height={10} width={60} count={1} className="skeleton" />
+				<Skeleton height={25} width={25} count={1} circle />
+			</ContainerPoint>
+		</ContainerCard>
+	) : (
+		<ContainerCard>
 			<img src={props.image} alt={props.suit} />
 			<SummaryCard>
 				<p>

@@ -1,5 +1,5 @@
 import { METHODS } from "http";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { Toast } from "react-toastify/dist/components";
 import { useRecoilCallback, useRecoilState } from "recoil";
@@ -12,9 +12,12 @@ import { ContainerCards } from "./style";
 
 export const Cards = () => {
 	const [userData, setUserData] = useRecoilState(userStateData);
+	const [loading, setLoading] = useState(false);
 
 	const startDeck = useCallback(async () => {
 		try {
+			setLoading(true);
+			console.log("iniciei");
 			const deckId = await cardUseCase.getDeckId();
 			if (!deckId) throw "Error ao processar o baralho";
 			if (!userData.deck_id)
@@ -35,6 +38,8 @@ export const Cards = () => {
 				});
 		} catch (error: Error | any) {
 			console.error(error.message);
+		} finally {
+			setLoading(false);
 		}
 	}, [setUserData, userData]);
 
@@ -45,12 +50,17 @@ export const Cards = () => {
 	return (
 		<React.StrictMode>
 			<Header />
+
 			<ContainerCards>
-				{userData.cards
-					? userData.cards?.map((item) => {
-							return <Card key={item.code} props={item} />;
-					  })
-					: null}
+				{userData.cards ? (
+					userData.cards?.map((item, index) => {
+						return <Card key={index} props={item} loading={loading} />;
+					})
+				) : (
+					<span>
+						<img src="image/loading.svg" width={"100"} alt="" />
+					</span>
+				)}
 			</ContainerCards>
 		</React.StrictMode>
 	);

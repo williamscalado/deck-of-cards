@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const ContainerCard = styled("div")`
-	border-radius: 10px;
-	padding: 5px;
+	border-radius: 0.625rem;
+	padding: 0.3125rem;
 	background-color: #fff;
 	margin: 1rem;
 	transition: box-shadow 0.5s;
+	width: 8.125rem;
 
 	img {
 		width: 7.5rem;
+		height: 168px;
 	}
 
 	&:hover {
@@ -19,9 +21,9 @@ export const ContainerCard = styled("div")`
 
 export const SummaryCard = styled("div")`
 	font-size: 0.7rem;
-	margin-top: 10px;
+	margin-top: 0.625rem;
 	width: 100%;
-	height: 50px;
+	height: 3.125rem;
 	font-weight: 400;
 	p {
 		display: flex;
@@ -34,9 +36,8 @@ export const SummaryCard = styled("div")`
 export const Description = styled("div")`
 	word-break: inherit;
 	word-wrap: break-word;
-	height: 20px;
-
-	width: 120px;
+	height: 1.25rem;
+	width: 7.5rem;
 	margin-top: 5px;
 	font-size: 0.4rem;
 	color: #aaa;
@@ -47,8 +48,8 @@ export const ContainerPoint = styled("div")`
 	display: flex;
 	margin: auto;
 	word-wrap: break-word;
-	height: 40px;
-	width: 100px;
+	height: 2.5rem;
+	width: 6.25rem;
 	font-size: 0.5rem;
 	margin-top: 5px;
 	justify-content: space-between;

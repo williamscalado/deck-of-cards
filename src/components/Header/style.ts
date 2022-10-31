@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const ContainerHeader = styled("div")`
 	margin: auto;
 	width: 80vw;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	img {
-		width: 200px;
+		width: 12.5rem;
 		padding: 1rem;
 	}
 
@@ -20,7 +19,7 @@ export const ContainerHeader = styled("div")`
 
 		img {
 			margin: auto;
-			width: 150px;
+			width: 9.375rem;
 			padding: 1rem;
 		}
 	}
@@ -61,7 +60,7 @@ export const ContainerUser = styled("div")`
 	@media (max-width: 700px) {
 		display: flex;
 		width: 90vw;
-		height: 50px;
+		height: 3.125rem;
 		justify-content: space-between;
 		border-radius: 0.5rem;
 		font-size: 0.7rem;

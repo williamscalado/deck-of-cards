@@ -56,7 +56,7 @@ export const Header = () => {
 			<img src="/image/logo.png" alt="Cecilia's Cards" />
 			<ContainerMenu>
 				<button onClick={handleShuffle}>Embaralha</button>
-				<button onClick={handleNewCard}>Nova carta</button>
+				<button onClick={handleNewCard}>Puxar carta</button>
 				<button onClick={handleExit}>Sair</button>
 			</ContainerMenu>
 			<ContainerUser>Olá, {dataUser.name}</ContainerUser>

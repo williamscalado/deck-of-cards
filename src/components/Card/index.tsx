@@ -23,7 +23,6 @@ const nameCard = (name: string) => {
 	nameDisplay["SPADES"] = "ESPADAS";
 	nameDisplay["HEARTS"] = "COPAS";
 	nameDisplay["CLUBS"] = "PAUS";
-
 	return nameDisplay[name];
 };
 interface IPropsCard {

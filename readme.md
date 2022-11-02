@@ -2,6 +2,8 @@
 
 Cecilia's Cards é um gerador de cartas aleatórios, inicia com 5 cartas, aonde voê pode solicitar mais 3 cartas adicionais totalizando 8 cartas ao final. você tem a opção de embaralhar as cartas visualizada.
 
+Versão online: https://deck-of-cards-kappa.vercel.app/
+
 ## Instalação
 
 Para instalar você deve baixar o repsitório

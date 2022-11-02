@@ -33,9 +33,8 @@ interface IPropsCard {
 }
 
 export const Card = ({ props, loading }: IPropsCard) => {
-	if (!props.suit) props.suit = "";
 	return loading ? (
-		<ContainerCard>
+		<ContainerCard data-testid="skeleton">
 			<Skeleton width={120} height={167} />
 			<SummaryCard>
 				<p>
@@ -52,10 +51,10 @@ export const Card = ({ props, loading }: IPropsCard) => {
 		</ContainerCard>
 	) : (
 		<ContainerCard>
-			<img src={props.image} alt={props.suit} />
+			<img src={props.image} alt={props.suit || ""} data-testid="img-card" />
 			<SummaryCard>
 				<p>
-					{valeuCard(props.value as string)} de {nameCard(props.suit)}
+					{valeuCard(props.value as string)} de {nameCard(props.suit || "")}
 				</p>
 				<Description>
 					Lorem Ipsum is simply dummy text of the printing and typesetting

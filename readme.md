@@ -10,7 +10,7 @@ Para instalar você deve baixar o repsitório
   git clone https://github.com/williamscalado/deck-of-cards.git
 ```
 
-Após baixar o repositório
+Após baixar o repositório, renomeie o aquivo .env_example para .env antes de rodar o projeto.
 
 ```bash
   yarn install

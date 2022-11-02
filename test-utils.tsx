@@ -3,7 +3,6 @@ import { render, RenderOptions } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { AppRouters } from "./src/routes";
 
 const AllTheProviders: FC = ({ children }: any) => {
 	return (
@@ -11,7 +10,6 @@ const AllTheProviders: FC = ({ children }: any) => {
 			<RecoilRoot>
 				<BrowserRouter>
 					<ToastContainer />
-
 					{children}
 				</BrowserRouter>
 			</RecoilRoot>

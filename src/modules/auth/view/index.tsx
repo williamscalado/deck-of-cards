@@ -40,7 +40,7 @@ export const Auth = () => {
 
 	return (
 		<ContainerLogin>
-			<img src="/image/logo.png" alt="Cecilia's Cards" />
+			<img src="/image/logo.png" alt="Cecilia's Cards" data-testid="img-logo" />
 			<ContainerForm onSubmit={handleSubmit(handleForm)}>
 				<Title>DIGITE SEU NOME</Title>
 				<ContainerInput>
@@ -52,7 +52,6 @@ export const Auth = () => {
 				{errors.name ? (
 					<ErrorMessage>{errors.name.message}</ErrorMessage>
 				) : null}
-
 				<ContainerButton>
 					<button>VER CARTAS</button>
 				</ContainerButton>

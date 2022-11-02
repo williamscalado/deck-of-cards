@@ -25,8 +25,8 @@ export const Header = () => {
 	const [dataUser, setDataUser] = useRecoilState(userStateData);
 	const handleNewCard = async () => {
 		const result = await cardUseCase.getCards(dataUser.deck_id as string, 1);
-		if (!result.cards[0]) return;
-		if (!dataUser.cards) return;
+		if (!result?.cards[0]) return;
+		if (!dataUser?.cards) return;
 		if (dataUser.cards?.length >= 8) {
 			toast.error("Não é possível solicitar mais cartas");
 			return;

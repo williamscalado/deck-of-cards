@@ -17,7 +17,6 @@ export const Cards = () => {
 	const startDeck = useCallback(async () => {
 		try {
 			setLoading(true);
-			console.log("iniciei");
 			const deckId = await cardUseCase.getDeckId();
 			if (!deckId) throw "Error ao processar o baralho";
 			if (!userData.deck_id)
@@ -31,13 +30,15 @@ export const Cards = () => {
 				5
 			);
 
+			if (!firstFiveCards) return;
+
 			if (!userData.cards)
 				setUserData({
 					...userData,
 					cards: firstFiveCards.cards,
 				});
-		} catch (error: Error | any) {
-			console.error(error.message);
+		} catch (err: Error | any) {
+			toast.error("Não conseguimos solicitar suas cartas, tente novamente");
 		} finally {
 			setLoading(false);
 		}
@@ -58,7 +59,12 @@ export const Cards = () => {
 					})
 				) : (
 					<span>
-						<img src="image/loading.svg" width={"100"} alt="" />
+						<img
+							src="image/loading.svg"
+							width={"100"}
+							alt="Carregando cartas"
+							data-testid="img-loading"
+						/>
 					</span>
 				)}
 			</ContainerCards>

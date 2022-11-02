@@ -86,7 +86,8 @@ export const ContainerMenu = styled("div")`
 	}
 
 	button {
-		background: var(--bs-yellow);
+		background: var(--red-600);
+		box-shadow: 0.125rem 0.1875rem 0.0625rem var(--bs-dark);
 		padding: 0.2rem 1rem;
 		margin-left: 1rem;
 		border: 0rem;
@@ -95,11 +96,10 @@ export const ContainerMenu = styled("div")`
 		border-radius: 1rem;
 		font-size: 1rem;
 		color: var(--bs-white);
-		transition: filter 0.3s;
-		box-shadow: 0.125rem 0.1875rem 0.0625rem var(--bs-dark);
+		transition: background 0.3s;
 
 		&:hover {
-			filter: brightness(0.9);
+			background: var(--red-800);
 		}
 
 		&:disabled {

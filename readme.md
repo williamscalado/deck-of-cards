@@ -17,12 +17,14 @@ Após baixar o repositório, renomeie o aquivo .env_example para .env antes de r
   yarn dev
 ```
 
+Para realizar os testes.
+
+```bash
+  yarn test
+```
+
 ## Tecnologias utilizadas
 
-**Client:** React, Typescript, Styled Components, Yup, React-hook-form, Recoil, React Toastify
+**Client:** React, Typescript, Styled Components, Yup, React-hook-form, Recoil, React Toastify, Vitest, @testing-library/react
 
 **API PÚBLICA** https://deckofcardsapi.com/
-
-## Dev
-
-- [@williamscalado](https://www.github.com/williamscalado)

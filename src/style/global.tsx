@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 body{
     /* background-color: var(--background); */
-    background: url("../../public/image/bg.jpg") no-repeat fixed center;
+    background: url("./image/bg.jpg") no-repeat fixed center;
     background-size:cover;
     font-size: 16;
     -webkit-font-smoothing: antialiased;

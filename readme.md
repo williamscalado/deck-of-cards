@@ -6,7 +6,7 @@ Versão online: https://deck-of-cards-kappa.vercel.app/
 
 ## Instalação
 
-Para instalar você deve baixar o repsitório
+Para instalar você deve baixar o repositório
 
 ```bash
   git clone https://github.com/williamscalado/deck-of-cards.git

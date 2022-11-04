@@ -9,23 +9,26 @@ import {
 	SummaryCard,
 } from "./style";
 
-const valeuCard = (value: string) => {
-	let nameDisplay: any = [];
-	nameDisplay["DEUCE"] = "Duque";
-	nameDisplay["JACK"] = "Valete";
-	nameDisplay["QUEEN"] = "Rainha";
-	nameDisplay["KING"] = "Rei";
-	nameDisplay["ACE"] = "ACE";
-	return nameDisplay[value] ? nameDisplay[value] : value;
+const valueCard = (value: string) => {
+	const nameDisplay: Record<string, any> = {
+		deuce: "Duque",
+		jack: "Valete",
+		queen: "Rainha",
+		king: "Rei",
+		ace: "Ace",
+	};
+
+	return nameDisplay[value].toLowerCase() || value;
 };
 
 const nameCard = (name: string) => {
-	let nameDisplay: any = [];
-	nameDisplay["DIAMONDS"] = "OURO";
-	nameDisplay["SPADES"] = "ESPADAS";
-	nameDisplay["HEARTS"] = "COPAS";
-	nameDisplay["CLUBS"] = "PAUS";
-	return nameDisplay[name];
+	let nameDisplay: Record<string, any> = {
+		diamonds: "Ouro",
+		spades: "Espada",
+		hearts: "Copas",
+		clubs: "Paus",
+	};
+	return nameDisplay[name].toLowerCase() || name;
 };
 interface IPropsCard {
 	props: IDataCard;
@@ -54,7 +57,7 @@ export const Card = ({ props, loading }: IPropsCard) => {
 			<img src={props.image} alt={props.suit || ""} data-testid="img-card" />
 			<SummaryCard>
 				<p>
-					{valeuCard(props.value as string)} de {nameCard(props.suit || "")}
+					{valueCard(props.value as string)} de {nameCard(props.suit || "")}
 				</p>
 				<Description>
 					Lorem Ipsum is simply dummy text of the printing and typesetting

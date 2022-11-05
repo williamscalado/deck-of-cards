@@ -18,7 +18,7 @@ const valueCard = (value: string) => {
 		ace: "Ace",
 	};
 
-	return nameDisplay[value].toLowerCase() || value;
+	return nameDisplay[value.toLowerCase()] || value;
 };
 
 const nameCard = (name: string) => {
@@ -28,8 +28,9 @@ const nameCard = (name: string) => {
 		hearts: "Copas",
 		clubs: "Paus",
 	};
-	return nameDisplay[name].toLowerCase() || name;
+	return nameDisplay[name.toLowerCase()] || name;
 };
+
 interface IPropsCard {
 	props: IDataCard;
 	loading?: boolean;

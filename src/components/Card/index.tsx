@@ -10,7 +10,7 @@ import {
 } from "./style";
 
 const valueCard = (value: string) => {
-	const nameDisplay: Record<string, any> = {
+	const nameDisplay: Record<string, string> = {
 		deuce: "Duque",
 		jack: "Valete",
 		queen: "Rainha",
@@ -22,7 +22,7 @@ const valueCard = (value: string) => {
 };
 
 const nameCard = (name: string) => {
-	let nameDisplay: Record<string, any> = {
+	const nameDisplay: Record<string, string> = {
 		diamonds: "Ouro",
 		spades: "Espada",
 		hearts: "Copas",
